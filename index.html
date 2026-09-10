@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio profissional de Mayron Lavra Cutrim — Engenheiro Eletricista, Engenharia e Manutenção Industrial, PCM, Confiabilidade e Automação.">
+  <meta name="theme-color" content="#061a36">
+  <title>Mayron Lavra Cutrim | Engenheiro Eletricista</title>
+  <style>
+    :root{
+      --navy:#061a36; --navy2:#0b2b54; --blue:#155a96; --gold:#d6a64a;
+      --cream:#f6f4ef; --text:#172235; --muted:#64748b; --white:#fff;
+      --shadow:0 18px 50px rgba(5,25,55,.12); --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:#fff;line-height:1.65}
+    a{color:inherit}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(6,26,54,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+    .nav-inner{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.03em}
+    .brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{text-decoration:none;color:#e8eef7;font-size:.92rem}
+    .nav-links a:hover{color:#f1c76d}
+    .hero{background:linear-gradient(135deg,var(--navy),#092c56);color:#fff;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -10% -65% 35%;height:600px;border:1px solid rgba(214,166,74,.22);border-radius:50%;transform:rotate(-12deg)}
+    .hero-inner{max-width:1180px;margin:auto;padding:76px 22px 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center;position:relative;z-index:1}
+    .eyebrow{color:#f1c76d;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;margin:12px 0 18px;letter-spacing:-.04em}
+    h1 span{color:#f1c76d}
+    .hero h2{font-size:clamp(1.05rem,2vw,1.45rem);font-weight:500;color:#d8e4f1;margin:0 0 22px}
+    .hero p{max-width:720px;color:#c5d3e4;font-size:1.05rem}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent}
+    .btn-primary{background:var(--gold);color:#081a32}
+    .btn-secondary{border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+    .hero-card{display:flex;justify-content:center}
+    .hero-card img{width:min(390px,100%);border-radius:26px;box-shadow:0 25px 70px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.16)}
+    section{padding:76px 22px}
+    .container{max-width:1180px;margin:auto}
+    .section-head{margin-bottom:35px}
+    .section-head .kicker{color:var(--blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+    h2.section-title{font-size:clamp(1.9rem,4vw,3rem);margin:6px 0 0;color:var(--navy);letter-spacing:-.03em}
+    .lead{color:var(--muted);max-width:800px}
+    .about{background:var(--cream)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .card{background:#fff;border:1px solid #e5eaf0;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:1.2rem}
+    .timeline{position:relative;margin-top:20px}
+    .timeline:before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:#dce5ef}
+    .job{position:relative;padding-left:42px;margin-bottom:34px}
+    .dot{position:absolute;left:2px;top:7px;width:18px;height:18px;border-radius:50%;background:var(--gold);border:4px solid #fff;box-shadow:0 0 0 2px #dce5ef}
+    .job h3{margin:0;color:var(--navy)}
+    .job .meta{color:var(--blue);font-weight:800;font-size:.92rem;margin:3px 0 10px}
+    ul.clean{padding-left:20px;margin:10px 0 0}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{padding:9px 13px;border-radius:999px;background:#eef4fa;color:#0c3a66;font-weight:700;font-size:.9rem}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project{border:1px solid #e5eaf0;border-radius:18px;padding:24px;background:#fff;transition:.2s}
+    .project:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .project .icon{font-size:1.5rem;margin-bottom:10px}
+    .project h3{color:var(--navy);margin:0 0 8px}
+    .project p{color:var(--muted);margin:0}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+    .stat{background:var(--navy);color:#fff;border-radius:18px;padding:20px}
+    .stat strong{display:block;font-size:1.4rem;color:#f1c76d}
+    .stat span{font-size:.85rem;color:#c5d3e4}
+    .education{background:#f8fafc}
+    .contact{background:linear-gradient(135deg,#071b38,#0d396c);color:#fff}
+    .contact h2{color:#fff!important}
+    .contact .lead{color:#c8d6e6}
+    .contact-box{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+    .contact-links{display:flex;flex-wrap:wrap;gap:12px}
+    .contact-link{padding:12px 15px;border:1px solid rgba(255,255,255,.18);border-radius:12px;text-decoration:none;color:#fff;background:rgba(255,255,255,.05)}
+    footer{background:#041225;color:#9fb0c5;text-align:center;padding:24px 22px;font-size:.88rem}
+    @media(max-width:850px){
+      .hero-inner,.grid-2,.contact-box{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr}
+      .nav-links{display:none}
+      .hero-card{order:-1}
+    }
+    @media(max-width:520px){section{padding:58px 18px}.hero-inner{padding:55px 18px}.stats{grid-template-columns:1fr}h1{font-size:2.65rem}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio">MAYRON <span>LAVRA</span> CUTRIM</a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a>
+        <a href="#formacao">Formação</a><a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Portfólio profissional</div>
+        <h1>Mayron <span>Lavra</span> Cutrim</h1>
+        <h2>Engenheiro Eletricista | Engenharia e Manutenção Industrial | PCM | Confiabilidade | Automação</h2>
+        <p>Engenheiro Eletricista com experiência em ambiente industrial de grande porte, conectando planejamento de manutenção, confiabilidade, automação, análise de dados e melhoria de processos para gerar segurança, eficiência operacional e redução de custos.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="Curriculo-Mayron-Cutrim-2026.pdf" download>↓ Baixar currículo</a>
+          <a class="btn btn-secondary" href="mailto:mayron.lc17.ml@gmail.com">✉ Entrar em contato</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/logo-mayron.jpeg" alt="Logo profissional de Mayron Lavra Cutrim">
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre" class="about">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Perfil</div><h2 class="section-title">Engenharia orientada a resultado</h2></div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Objetivo profissional</h3>
+          <p>Atuar na área de Engenharia e Manutenção Industrial e Processos, contribuindo para o planejamento, confiabilidade e otimização de ativos, gestão de indicadores, desenvolvimento de melhorias e acompanhamento de projetos, com foco em segurança, eficiência operacional e redução de custos.</p>
+        </div>
+        <div class="card">
+          <h3>Minha atuação</h3>
+          <p>Experiência com planejamento e programação de manutenção preventiva, corretiva e preditiva, gestão de backlog, indicadores, materiais reparáveis, compras técnicas, análise de falhas, ordens de serviço e interface multidisciplinar com Operação, Engenharia e Manutenção.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>Industrial</strong><span>Experiência em ambiente de grande porte</span></div>
+        <div class="stat"><strong>PCM</strong><span>Planejamento, programação e backlog</span></div>
+        <div class="stat"><strong>Automação</strong><span>Controle, supervisão e HMI</span></div>
+        <div class="stat"><strong>Dados</strong><span>Excel, Power BI e indicadores</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Trajetória</div><h2 class="section-title">Experiência profissional</h2></div>
+      <div class="timeline">
+        <article class="job"><span class="dot"></span><h3>ALUMAR – Consórcio de Alumínio do Maranhão</h3><div class="meta">Controlador de Materiais – Sala de Cubas · 2025 – Atual</div>
+          <ul class="clean">
+            <li>Planejamento e programação de manutenção preventiva, corretiva e preditiva.</li>
+            <li>Gestão de backlog e balanceamento de HH das equipes.</li>
+            <li>Acompanhamento de indicadores de manutenção e confiabilidade.</li>
+            <li>Follow-up de materiais reparáveis e compras técnicas.</li>
+            <li>Interface com Operação, Engenharia e Manutenção.</li>
+            <li>Programação de atividades e otimização de ordens de serviço.</li>
+          </ul>
+        </article>
+        <article class="job"><span class="dot"></span><h3>ALUMAR – Consórcio de Alumínio do Maranhão</h3><div class="meta">Estagiário – Planejamento de Manutenção / Sistema de Força · 2023 – 2025</div>
+          <ul class="clean"><li>Criação e gestão de planos de manutenção.</li><li>Monitoramento de indicadores e análise de falhas.</li><li>Suporte à programação de atividades de manutenção.</li><li>Atuação no planejamento e manutenção de sistemas de força.</li></ul>
+        </article>
+        <article class="job"><span class="dot"></span><h3>ALUMAR – Consórcio de Alumínio do Maranhão</h3><div class="meta">Estagiário – Automação e Controle / Sala de Cubas · 2023</div>
+          <ul class="clean"><li>Suporte em sistemas de automação industrial.</li><li>Análise de lógica de controle e documentação técnica.</li><li>Apoio em sistemas supervisórios e interfaces HMI.</li></ul>
+        </article>
+        <article class="job"><span class="dot"></span><h3>Silic Energia Solar</h3><div class="meta">Sócio Proprietário · 2024 – 2026</div>
+          <ul class="clean"><li>Gestão técnica e estratégica de projetos de energia solar.</li><li>Acompanhamento do desempenho e manutenção de sistemas fotovoltaicos.</li><li>Suporte a sistemas de monitoramento e atendimento a clientes.</li></ul>
+        </article>
+        <article class="job"><span class="dot"></span><h3>Minerva Soluções em Engenharia</h3><div class="meta">Estagiário em Engenharia Elétrica · 2023</div>
+          <ul class="clean"><li>Vistorias técnicas em instalações elétricas.</li><li>Elaboração de relatórios e inspeções técnicas.</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="competencias" class="about">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Conhecimentos</div><h2 class="section-title">Competências técnicas</h2></div>
+      <div class="skills">
+        <span class="tag">Planejamento e Controle da Manutenção (PCM)</span><span class="tag">Programação de manutenção</span>
+        <span class="tag">Gestão de backlog</span><span class="tag">Análise de falhas</span><span class="tag">Confiabilidade</span>
+        <span class="tag">Indicadores de manutenção</span><span class="tag">Engenharia de Manutenção</span><span class="tag">Automação Industrial</span>
+        <span class="tag">Sistemas de Controle</span><span class="tag">Supervisórios e HMI</span><span class="tag">Documentação técnica</span>
+        <span class="tag">Vistorias técnicas</span><span class="tag">Gestão de projetos</span><span class="tag">Excel Avançado</span>
+        <span class="tag">Power BI</span><span class="tag">eAM</span><span class="tag">SAP</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><div class="kicker">Áreas de destaque</div><h2 class="section-title">Onde posso gerar valor</h2></div>
+      <div class="projects">
+        <article class="project"><div class="icon">⚙️</div><h3>Manutenção & PCM</h3><p>Planejamento, programação, backlog, planos preventivos, indicadores e suporte à execução da manutenção.</p></article>
+        <article class="project"><div class="icon">📊</div><h3>Confiabilidade & Dados</h3><p>Análise de falhas, acompanhamento de indicadores, eficiência operacional e uso de dados para apoiar decisões.</p></article>
+        <article class="project"><div class="icon">🤖</div><h3>Automação Industrial</h3><p>Experiência com lógica de controle, CLP, sistemas supervisórios e interfaces HMI em ambiente industrial.</p></article>
+        <article class="project"><div class="icon">☀️</div><h3>Energia Solar</h3><p>Gestão técnica de projetos fotovoltaicos, acompanhamento de desempenho, manutenção e monitoramento.</p></article>
+        <article class="project"><div class="icon">📐</div><h3>Engenharia Elétrica</h3><p>Vistorias, inspeções, documentação técnica e atuação em instalações e sistemas elétricos industriais.</p></article>
+        <article class="project"><div class="icon">🔄</div><h3>Melhoria Contínua</h3><p>Visão orientada à otimização de processos, segurança, eficiência e redução de custos.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacao" class="education">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Formação & desenvolvimento</div><h2 class="section-title">Base acadêmica e certificações</h2></div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Formação acadêmica</h3>
+          <p><strong>Universidade Federal do Maranhão – UFMA</strong><br>Bacharelado em Engenharia Elétrica · 2019 – 2025</p>
+          <p><strong>UNINTER – Centro Universitário Internacional</strong><br>Pós-graduação em Engenharia de Controle e Automação · 2026<br>Pós-graduação em Dimensionamento de Circuitos Elétricos Industriais · 2026 – 2027</p>
+        </div>
+        <div class="card">
+          <h3>Certificações relevantes</h3>
+          <ul class="clean">
+            <li>Planejamento e Controle da Manutenção – PCM</li>
+            <li>Allen Bradley PLC Training – RSLogix 5000</li>
+            <li>Power BI para Análise de Dados</li>
+            <li>Lean Six Sigma White and Yellow Belt</li>
+            <li>Programação de CLP e IHM – Siemens</li>
+            <li>Geração Distribuída – ABGD</li>
+          </ul>
+          <p><strong>Idioma:</strong> Inglês – Avançado (C1)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><div class="kicker">Liderança</div><h2 class="section-title">Atividades acadêmicas</h2></div>
+      <div class="grid-2">
+        <div class="card"><h3>Insight Empresa Júnior</h3><p>Vice-Presidente</p></div>
+        <div class="card"><h3>SENGE – Semana de Engenharia do Maranhão</h3><p>Coordenador Discente</p></div>
+        <div class="card"><h3>Atlética Ampére UFMA</h3><p>Diretor de Esportes</p></div>
+        <div class="card"><h3>Disponibilidade profissional</h3><p>Atuação em Engenharia Elétrica, Manutenção Industrial, PCM, Confiabilidade, Automação e Processos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <div class="eyebrow">Vamos conversar</div>
+          <h2 class="section-title">Construindo soluções com engenharia, dados e tecnologia.</h2>
+          <p class="lead">São Luís – MA · CREA-MA: 1123501300MA</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:mayron.lc17.ml@gmail.com">✉ mayron.lc17.ml@gmail.com</a>
+          <a class="contact-link" href="tel:+5598999029499">☎ (98) 99902-9499</a>
+          <a class="contact-link" href="Curriculo-Mayron-Cutrim-2026.pdf" download>↓ Currículo PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Mayron Lavra Cutrim · Engenharia Elétrica · Automação · Manutenção Industrial</footer>
+</body>
+</html>
